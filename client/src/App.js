@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+// DEPENDENCIES
+import {Switch, Route} from 'react-router-dom'
+
+// COMPONENTS
+import Layout from '../src/layouts/Layout'
+import MainContainer from '../src/containers/MainContainer'
+
+// STYLES
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      {/* LOGIN */}
+      <Route path='/login'>
+        
+      </Route>
+
+      {/* REGISTER */}
+      <Route path='/register'>
+
+      </Route>
+
+      {/* LANDING */}
+      <Route path='/'>
+        <MainContainer />
+      </Route>
+    </Layout>
   );
 }
 
