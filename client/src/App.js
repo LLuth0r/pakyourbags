@@ -1,11 +1,31 @@
-import logo from './logo.svg';
+// DEPENDENCIES
+import {Switch, Route} from 'react-router-dom'
+
+// COMPONENTS
+import Layout from '../src/layouts/Layout'
+import MainContainer from '../src/containers/MainContainer'
+
+// STYLES
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Pak Your Bags (_)_):::::::D~~~</h1>
-    </div>
+    <Layout>
+      {/* LOGIN */}
+      <Route path='/login'>
+        
+      </Route>
+
+      {/* REGISTER */}
+      <Route path='/register'>
+
+      </Route>
+
+      {/* LANDING */}
+      <Route path='/'>
+        <MainContainer />
+      </Route>
+    </Layout>
   );
 }
 
