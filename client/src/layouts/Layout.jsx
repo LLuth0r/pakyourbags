@@ -1,4 +1,10 @@
+// DEPENDENCIES
 import React from "react";
+
+// COMPONENTS
+import FooterNav from "../shared/FooterNav";
+
+// STYLES
 import "../styles/Layout.css";
 
 const Layout = (props) => {
@@ -6,7 +12,7 @@ const Layout = (props) => {
     <div className="layout-div">
       {props.children}
       <footer className="nav-footer">
-        <h1>(_)_):::\\\\:::D~~~~</h1>
+        <FooterNav />
       </footer>
     </div>
   );

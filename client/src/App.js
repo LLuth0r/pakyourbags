@@ -11,20 +11,22 @@ import './App.css';
 function App() {
   return (
     <Layout>
-      {/* LOGIN */}
-      <Route path='/login'>
-        
-      </Route>
+      <Switch>
+        {/* LOGIN */}
+        <Route path='/login'>
+          
+        </Route>
 
-      {/* REGISTER */}
-      <Route path='/register'>
+        {/* REGISTER */}
+        <Route path='/register'>
 
-      </Route>
+        </Route>
 
-      {/* LANDING */}
-      <Route path='/'>
-        <MainContainer />
-      </Route>
+        {/* LANDING */}
+        <Route path='/'>
+          <MainContainer />
+        </Route>
+      </Switch>
     </Layout>
   );
 }

@@ -1,7 +1,20 @@
 .nav-footer {
   background-color: #232023;
   color: whitesmoke;
-  position: fixed;
+  position: relative;
   height: 75px;
   width: 100%;
+  bottom: 0px;
+}
+
+.layout-div {
+  background-color: green;
+  height: 100vh;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
