@@ -9,12 +9,12 @@ import "../styles/Layout.css";
 
 const Layout = (props) => {
   return (
-    <div className="layout-div">
-      {props.children}
+    <>
+      <div className="layout-div">{props.children}</div>
       <footer className="nav-footer">
         <FooterNav />
       </footer>
-    </div>
+    </>
   );
 };
 
