@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import {NavLink} from 'react-router-dom'
 
 const Register = (props) => {
 
   // setting form data state
 
   const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
     username: "",
     email: "",
     password: "",
   });
 
-  const { username, email, password } = formData;
+  const { first_name, last_name, username, email, password } = formData;
 
   // deconstructing handle register function from auth
 
@@ -28,7 +31,16 @@ const Register = (props) => {
   };
   
   return (
-    <div className='formdiv'>
+    <div className="registerpage">
+			<div className="login-text">
+				<h3 className="login-header">Register for a new account.</h3>
+				<h6 className="register-header">
+					Already have one?{" "}
+					<NavLink className="register-link" to="/login">
+						Sign in.
+					</NavLink>
+				</h6>
+			</div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -36,8 +48,21 @@ const Register = (props) => {
         }}
       >
         <TextField
+          name="first_name"
+          label="First Name"
+          variant="outlined"
+          value={first_name}
+          onChange={handleChange}
+        />
+        <TextField
+          name="last_name"
+          label="Last Name"
+          variant="outlined"
+          value={last_name}
+          onChange={handleChange}
+        />
+        <TextField
           name="username"
-          id="username"
           label="Username"
           variant="outlined"
           value={username}
@@ -45,7 +70,6 @@ const Register = (props) => {
         />
         <TextField
           name="email"
-          id="email"
           label="Email"
           variant="outlined"
           value={email}
@@ -53,17 +77,16 @@ const Register = (props) => {
         />
         <TextField
           name="password"
-          id="password"
           type="password"
           label="Password"
           variant="outlined"
           value={password}
           onChange={handleChange}
         />
-        <Button className='formbutton'
+        <Button className='register-button'
           variant="contained"
           type='submit'
-        >Login</Button>
+        >Register</Button>
       </form>
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import {NavLink} from 'react-router-dom'
 
 const Login = (props) => {
   
@@ -28,7 +29,16 @@ const Login = (props) => {
   };
 
   return (
-    <div className="formdiv">
+    <div className="loginpage">
+			<div className="login-text">
+				<h3 className="login-header">Login to your account.</h3>
+				<h6 className="register-header">
+					Don't have one?{" "}
+					<NavLink className="register-link" to="/register">
+						Register for an account.
+					</NavLink>
+				</h6>
+			</div>
       <form
         onSubmit={(e) => {
           e.preventDefault();
