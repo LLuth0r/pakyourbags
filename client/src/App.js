@@ -1,15 +1,17 @@
 // DEPENDENCIES
 import { Switch, Route, useHistory } from 'react-router-dom'
-import { loginUser, registerUser } from './services/auth'
-import { useState } from 'react'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+import { useState, useEffect } from 'react'
 
 // COMPONENTS
 import Layout from '../src/layouts/Layout'
 import MainContainer from '../src/containers/MainContainer'
+import Register from '../src/screens/Register'
+import Login from '../src/screens/Login'
 
 // STYLES
 import './App.css';
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
+
 
 function App() {
   // Define current user to pass down as props
