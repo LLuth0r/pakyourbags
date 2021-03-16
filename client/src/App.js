@@ -1,6 +1,7 @@
 // DEPENDENCIES
-import { useState, useEffect } from 'react';
-import {Switch, Route, useHistory} from 'react-router-dom'
+import { Switch, Route, useHistory } from 'react-router-dom'
+import { loginUser, registerUser } from './services/auth'
+import { useState } from 'react'
 
 // COMPONENTS
 import Layout from '../src/layouts/Layout'
@@ -47,21 +48,25 @@ function App() {
   }
 
   return (
-    <Layout>
+    <Layout currentUser={currentUser}>
       <Switch>
         {/* LOGIN */}
         <Route path='/login'>
-          
+          <Login
+            handleLogin={handleLogin}
+          />
         </Route>
 
         {/* REGISTER */}
         <Route path='/register'>
-
+          <Register
+            handleRegister={handleRegister}
+          />
         </Route>
 
         {/* LANDING */}
         <Route path='/'>
-          <MainContainer />
+          <MainContainer currentUser={ currentUser}/>
         </Route>
       </Switch>
     </Layout>
