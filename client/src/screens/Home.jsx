@@ -1,10 +1,19 @@
-import React from "react";
+// DEPENDENCIES
+
+// COMPONENTS
+
+// STYLES
+import "../styles/Home.css";
 
 const Home = () => {
   return (
-    <>
-      <p>Take your trip planning experience to the next level.</p>
-    </>
+    <div className="home-div">
+      <div className="landing-text">
+        <h2>TAKE YOUR TRIP</h2>
+        <h2>PLANNING EXPERIENCE</h2>
+        <h2>TO THE NEXT LEVEL</h2>
+      </div>
+    </div>
   );
 };
 

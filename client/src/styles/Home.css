@@ -1,0 +1,33 @@
+.home-div {
+  display: flex;
+  justify-content: center;
+}
+
+.landing-text {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #1d1d1d;
+  color: orange;
+  margin-top: 100px;
+  position: fixed;
+  width: 40vw;
+  padding: 30px;
+  outline: 3px solid black;
+}
+
+.landing-text h2 {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  background-color: rgb(46, 39, 26);
+  text-shadow: 0px 0px 100px rgb(255, 212, 133);
+  /* animation: neon .05s linear infinite; */
+}
+
+
+@keyframes neon {
+  from {
+    text-shadow: 0 0 1px orange
+  }
+  to {
+    text-shadow: 0 0 30px orange
+  }
+}
