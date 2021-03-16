@@ -12,7 +12,7 @@ const FooterNav = () => {
       {currentUser ? (
         <>
           <p>{`Welcome, ${currentUser}`} </p>
-          <ExitToAppIcon />
+          <ExitToAppIcon id="exit-icon" />
         </>
       ) : (
         <p>Login</p>

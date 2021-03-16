@@ -9,26 +9,42 @@ import MainContainer from '../src/containers/MainContainer'
 
 // STYLES
 import './App.css';
-import Login from './screens/Login';
-import Register from './screens/Register'
+import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
 
 function App() {
+  // Define current user to pass down as props
   const [currentUser, setCurrentUser] = useState(null);
-  const history = useHistory()
 
-  // imported loginuser from auth to handle our login functionality
+  // useHistory to redirect user when they log in and/or register
+  const history = useHistory();
 
+  // Verify returning user
+  useEffect(() => {
+    const handleVerify = async () => {
+      const userData = await verifyUser();
+      setCurrentUser(userData);
+    }
+  }, []);
+
+  // Login user
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
-    history.push('/')
-  }
+    history.push('/');
+  };
 
-    // imported registeruser from auth to handle our register functionality
+  // Register user
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/')
+    history.push('/');
+  }
+
+  // Logout user
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem('authToken');
+    removeToken();
   }
 
   return (
