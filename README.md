@@ -1,6 +1,6 @@
 ## Overview
 
-_**PakYourBags** is a travel planning app.  It provides a modern, intuitive method for planning a trip for yourself or for a group.  Pick dates & locations, vote, and plan the rest of your group trip by creating a custom travel itinerary.  Users can invite their friends and family to help with the planning process, share memories from the trip and communicate with one another._
+_**PakYourBags** is a travel planning app.  It provides a modern, intuitive, social method for planning a trip for yourself or for a group.  Pick dates & locations, vote, and plan the rest of your group trip by creating a custom travel itinerary.  Users can invite their friends and family to help with the planning process, share memories from the trip and communicate with one another._
 
 
 <br>
