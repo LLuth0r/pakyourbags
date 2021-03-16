@@ -1,21 +1,26 @@
 import React from "react";
+import {Link} from 'react-router-dom'
 
 // MATERIAL UI COMPONENTS
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
-const FooterNav = () => {
+const FooterNav = (props) => {
   // Will Set this up
-  let currentUser = "bill";
+  const {currentUser, handleLogout} = props;
+  console.log(currentUser)
+
+
   return (
     <div className="nav-container">
       <h1>Pak Your Bags</h1>
       {currentUser ? (
         <>
-          <p>{`Welcome, ${currentUser}`} </p>
-          <ExitToAppIcon id="exit-icon" />
+          <p>{`Welcome, ${currentUser.first_name}`} </p>
+          <ExitToAppIcon id="exit-icon" onClick={handleLogout}/>
         </>
       ) : (
-        <p>Login</p>
+        
+        <Link to='/login'>Login</Link>
       )}
     </div>
   );

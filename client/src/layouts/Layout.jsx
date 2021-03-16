@@ -8,11 +8,13 @@ import FooterNav from "../shared/FooterNav";
 import "../styles/Layout.css";
 
 const Layout = (props) => {
+  const {currentUser, handleLogout} = props;
+
   return (
     <>
       <div className="layout-div">{props.children}</div>
       <footer className="nav-footer">
-        <FooterNav />
+        <FooterNav handleLogout={handleLogout} currentUser={currentUser}/>
       </footer>
     </>
   );
