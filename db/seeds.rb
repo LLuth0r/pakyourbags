@@ -16,7 +16,7 @@ User.destroy_all
 
 
 
-@admin = User.create!(username: 'admin', email: 'admin@email.com', password: '123456')
+@admin = User.create!(first_name: 'Administrator', last_name: 'Administrator',username: 'admin', email: 'admin@email.com', password: '123456')
 puts "#{User.count} users created"
 
 @trip1 = Trip.create!(name: 'Cancun 2021', location: 'Cancun', created_at: '03/20/2020', updated_at: '05/21/2020', user: @admin)
