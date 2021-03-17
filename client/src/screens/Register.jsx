@@ -3,6 +3,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {NavLink} from 'react-router-dom'
 
+//Styling
+import '../styles/Register.css'
+
 const Register = (props) => {
 
   // setting form data state
@@ -42,6 +45,7 @@ const Register = (props) => {
 				</h6>
 			</div>
       <form
+      className='register-form'
         onSubmit={(e) => {
           e.preventDefault();
           handleRegister(formData);
@@ -50,28 +54,28 @@ const Register = (props) => {
         <TextField
           name="first_name"
           label="First Name"
-          variant="outlined"
+          variant="filled"
           value={first_name}
           onChange={handleChange}
         />
         <TextField
           name="last_name"
           label="Last Name"
-          variant="outlined"
+          variant="filled"
           value={last_name}
           onChange={handleChange}
         />
         <TextField
           name="username"
           label="Username"
-          variant="outlined"
+          variant="filled"
           value={username}
           onChange={handleChange}
         />
         <TextField
           name="email"
           label="Email"
-          variant="outlined"
+          variant="filled"
           value={email}
           onChange={handleChange}
         />
@@ -79,7 +83,7 @@ const Register = (props) => {
           name="password"
           type="password"
           label="Password"
-          variant="outlined"
+          variant="filled"
           value={password}
           onChange={handleChange}
         />

@@ -3,6 +3,9 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import {NavLink} from 'react-router-dom'
 
+//Styling
+import '../styles/Login.css'
+
 const Login = (props) => {
   
   // setting form data state
@@ -40,6 +43,7 @@ const Login = (props) => {
 				</h6>
 			</div>
       <form
+      className='login-form'
         onSubmit={(e) => {
           e.preventDefault();
           handleLogin(formData);
@@ -49,7 +53,7 @@ const Login = (props) => {
           name="username"
           id="username"
           label="Username"
-          variant="outlined"
+          variant="filled"
           value={username}
           onChange={handleChange}
         />
@@ -58,7 +62,7 @@ const Login = (props) => {
           id="password"
           type="password"
           label="Password"
-          variant="outlined"
+          variant="filled"
           value={password}
           onChange={handleChange}
         />
