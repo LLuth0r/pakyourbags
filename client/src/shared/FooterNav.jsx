@@ -11,14 +11,8 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 
-// MATERIAL UI ICONS
+// ICONS
 import MenuIcon from "@material-ui/icons/Menu";
-import PersonIcon from "@material-ui/icons/Person";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import FlightIcon from "@material-ui/icons/Flight";
-import HotelIcon from "@material-ui/icons/Hotel";
-import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
-import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import {
   FaUserTie,
   FaHotel,
@@ -28,8 +22,8 @@ import {
   FaPlane,
   FaCameraRetro,
   FaMoneyBillAlt,
+  FaSignOutAlt,
 } from "react-icons/fa";
-import {GiMoneyStack} from "react-icons/gi";
 
 // STYLES
 import "../styles/FooterNav.css";
@@ -112,7 +106,7 @@ const FooterNav = (props) => {
         {currentUser ? (
           <ListItem button onClick={handleLogout} type="submit">
             <ListItemIcon>
-              <ExitToAppIcon className="drawer-icon" />
+              <FaSignOutAlt className="drawer-icon" />
             </ListItemIcon>
             <ListItemText primary="Log Out" />
           </ListItem>
@@ -127,7 +121,16 @@ const FooterNav = (props) => {
       {currentUser ? (
         <>
           <p>{`Welcome, ${currentUser.first_name}`} </p>
-          <ExitToAppIcon id="exit-icon" onClick={handleLogout} />
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <MenuIcon className="menu-icon" />
+          </Button>
+          <Drawer
+            anchor={anchor}
+            open={toggle[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+          >
+            {list(anchor)}
+          </Drawer>
         </>
       ) : (
         <React.Fragment>
