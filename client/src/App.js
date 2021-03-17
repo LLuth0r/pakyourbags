@@ -26,6 +26,7 @@ function App() {
       const userData = await verifyUser();
       setCurrentUser(userData);
     }
+    handleVerify()
   }, []);
 
   // Login user
