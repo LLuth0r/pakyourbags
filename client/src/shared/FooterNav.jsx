@@ -61,19 +61,7 @@ const FooterNav = (props) => {
             <ListItemText primary="Login" />
           )}
         </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <FaSuitcaseRolling className="drawer-icon" />
-          </ListItemIcon>
-          <ListItemText primary="My Trips" />
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <FaPlus className="drawer-icon" />
-          </ListItemIcon>
-          <ListItemText primary="Add Trip" />
-        </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <ListItemIcon>
             <FaRegCalendarAlt className="drawer-icon" />
           </ListItemIcon>
@@ -96,20 +84,34 @@ const FooterNav = (props) => {
             <FaPlane className="drawer-icon" />
           </ListItemIcon>
           <ListItemText primary="Flights" />
-        </ListItem>
-        <ListItem>
-          <ListItemIcon>
-            <FaCameraRetro className="drawer-icon" />
-          </ListItemIcon>
-          <ListItemText primary="Photos" />
-        </ListItem>
+        </ListItem> */}
         {currentUser ? (
-          <ListItem button onClick={handleLogout} type="submit">
-            <ListItemIcon>
-              <FaSignOutAlt className="drawer-icon" />
-            </ListItemIcon>
-            <ListItemText primary="Log Out" />
-          </ListItem>
+          <>
+            <ListItem>
+              <ListItemIcon>
+                <FaSuitcaseRolling className="drawer-icon" />
+              </ListItemIcon>
+              <ListItemText primary="My Trips" />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <FaPlus className="drawer-icon" />
+              </ListItemIcon>
+              <ListItemText primary="Add Trip" />
+            </ListItem>
+            <ListItem>
+              <ListItemIcon>
+                <FaCameraRetro className="drawer-icon" />
+              </ListItemIcon>
+              <ListItemText primary="Photos" />
+            </ListItem>
+            <ListItem button onClick={handleLogout} type="submit">
+              <ListItemIcon>
+                <FaSignOutAlt className="drawer-icon" />
+              </ListItemIcon>
+              <ListItemText primary="Log Out" />
+            </ListItem>
+          </>
         ) : null}
       </List>
     </div>
