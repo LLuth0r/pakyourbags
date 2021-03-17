@@ -5,6 +5,7 @@
   height: 10vh;
   width: 100%;
   bottom: 0px;
+  word-spacing: -12px;
 }
 
 .menu-icon {
@@ -20,4 +21,23 @@
   height: 100%;
   padding-left: 25px;
   padding-right: 25px;
+}
+
+.logo-container {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* margin-left: 25px; */
+}
+
+.logo {
+  /* background-color: #371bb1; */
+  background-image: url("../assets/logo.png");
+  background-position: center;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 75px;
+  /* border-radius: 100%; */
 }
