@@ -43,42 +43,42 @@ const Register = (props) => {
 						Sign in.
 					</NavLink>
 				</h6>
-			</div>
+			</div>      
       <form
       className='register-form'
         onSubmit={(e) => {
           e.preventDefault();
           handleRegister(formData);
         }}
-      >
+        >
         <TextField
           name="first_name"
           label="First Name"
           variant="filled"
           value={first_name}
           onChange={handleChange}
-        />
+          />
         <TextField
           name="last_name"
           label="Last Name"
           variant="filled"
           value={last_name}
           onChange={handleChange}
-        />
+          />
         <TextField
           name="username"
           label="Username"
           variant="filled"
           value={username}
           onChange={handleChange}
-        />
+          />
         <TextField
           name="email"
           label="Email"
           variant="filled"
           value={email}
           onChange={handleChange}
-        />
+          />
         <TextField
           name="password"
           type="password"
@@ -86,11 +86,11 @@ const Register = (props) => {
           variant="filled"
           value={password}
           onChange={handleChange}
-        />
+          />
         <Button className='register-button'
           variant="contained"
           type='submit'
-        >Register</Button>
+          >Register</Button>
       </form>
     </div>
   );

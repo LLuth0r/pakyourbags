@@ -6,7 +6,9 @@
 
 .login-text {
 	margin: 250px 50px 0 25px;
+    padding: 10px 10px;
 	position: relative;
+    background-color: rgba(255,255,255, 0.6);
 }
 
 .login-header {
@@ -21,8 +23,14 @@
 	font-size: 14px;
 }
 
+.form-background {
+    background-color: rgba(255,255,255, 0.7);
+    margin-top: 250px;
+    height: 150px;
+}
+
 .login-form {
-	margin-top: 150px;
+    margin: 5px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
