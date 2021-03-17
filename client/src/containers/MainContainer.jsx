@@ -18,7 +18,7 @@ const MainContainer = () => {
       <Route></Route>
       {/* TRIP OVERVIEW */}
       {/* BUDGET */}
-      {/* ITINERARY */}
+      {/* ACTIVITIES */}
       {/* PHOTOS */}
       {/* FLIGHTS/TRAVEL INFO */}
     </Switch>

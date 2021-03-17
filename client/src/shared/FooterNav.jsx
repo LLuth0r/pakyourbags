@@ -117,7 +117,9 @@ const FooterNav = (props) => {
 
   return (
     <div className="nav-container">
-      <h1>Pak Your Bags</h1>
+      <div className="logo-container">
+        <div className="logo"></div>
+      </div>
       {currentUser ? (
         <>
           <p>{`Welcome, ${currentUser.first_name}`} </p>
@@ -133,7 +135,7 @@ const FooterNav = (props) => {
           </Drawer>
         </>
       ) : (
-        <React.Fragment>
+        <>
           <Button onClick={toggleDrawer(anchor, true)}>
             <MenuIcon className="menu-icon" />
           </Button>
@@ -144,7 +146,7 @@ const FooterNav = (props) => {
           >
             {list(anchor)}
           </Drawer>
-        </React.Fragment>
+        </>
       )}
     </div>
   );
