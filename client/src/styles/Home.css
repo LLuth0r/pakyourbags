@@ -1,23 +1,61 @@
 .home-div {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  background-image: url("../assets/photo-1570970596471-fbb61e48b6cc.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .landing-text {
   font-family: "Roboto Mono", monospace;
-  background-color: #1d1d1d;
-  color: orange;
-  margin-top: 100px;
+  text-align: center;
+  color: white;
+  margin-top: 40vh;
   position: fixed;
-  width: 70vw;
-  padding: 20px;
-  outline: 3px solid black;
+  width: 90vw;
+  font-size: 28px;
+  text-shadow: 1px 1px 5px #121212;
+  word-spacing: -10px;
+}
+.landing-text h2 {
+  margin: 0px;
 }
 
-.landing-text h2 {
-  margin-top: 3px;
-  margin-bottom: 3px;
-  font-size: 1.25em;
-  background-color: rgb(46, 39, 26);
-  text-shadow: 0px 0px 100px rgb(255, 212, 133);
+.next-level {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.get-started-button {
+  margin: 230px 0px 0px 0px;
+  width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actual-button {
+  width: 300px;
+  height: 70px;
+}
+
+.the-real-button button {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+  font-size: 20px;
+  width: 300px;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fe5c31;
+  color: white;
+  border: 0;
+  outline: none;
+  border-radius: 15px;
+  text-decoration: none;
+  box-shadow: 1px 1px 5px #121212;
 }
