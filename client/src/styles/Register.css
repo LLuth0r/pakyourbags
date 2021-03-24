@@ -1,23 +1,23 @@
 .registerpage {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
-.login-text {
-	margin: 150px 50px 0 25px;
+.register-text {
+  margin: 100px 50px 0 25px;
 }
 
 .login-header {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .register-header {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .register-link {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .register-form {

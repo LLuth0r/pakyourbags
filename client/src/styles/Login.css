@@ -1,7 +1,7 @@
 .loginpage {
-	display: flex;
-	flex-flow: wrap;
-	justify-content: center;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
 }
 
 .login-text {
@@ -12,15 +12,15 @@
 }
 
 .login-header {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 .register-header {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .register-link {
-	font-size: 14px;
+  font-size: 14px;
 }
 
 .form-background {

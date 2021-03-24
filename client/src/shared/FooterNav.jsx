@@ -26,7 +26,15 @@ import {
 } from "react-icons/fa";
 
 // STYLES
+import {makeStyles} from "@material-ui/core/styles";
 import "../styles/FooterNav.css";
+
+const useStyles = makeStyles({
+  list: {
+    color: "whitesmoke",
+    fill: "whitesmoke",
+  },
+});
 
 const FooterNav = (props) => {
   // Pulls currentUser object and the handleLogout function from props
@@ -43,12 +51,14 @@ const FooterNav = (props) => {
     setToggle({...toggle, [anchor]: open});
   };
 
+  const classes = useStyles();
+
   const list = (anchor) => (
     <div
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List className={classes.list}>
         <ListItem button component={Link} to="/login">
           <ListItemIcon>
             <FaUserTie className="drawer-icon" />
@@ -129,6 +139,7 @@ const FooterNav = (props) => {
             <MenuIcon className="menu-icon" />
           </Button>
           <Drawer
+            className={classes.list}
             anchor={anchor}
             open={toggle[anchor]}
             onClose={toggleDrawer(anchor, false)}
@@ -142,6 +153,7 @@ const FooterNav = (props) => {
             <MenuIcon className="menu-icon" />
           </Button>
           <Drawer
+            className={classes.list}
             anchor={anchor}
             open={toggle[anchor]}
             onClose={toggleDrawer(anchor, false)}

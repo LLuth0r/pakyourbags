@@ -1,6 +1,9 @@
 // DEPENDENCIES
+import {Link} from "react-router-dom";
 
-// COMPONENTS
+// MATERIAL UI COMPONENTS
+// import Button from "@material-ui/core/Button";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 // STYLES
 import "../styles/Home.css";
@@ -9,9 +12,26 @@ const Home = () => {
   return (
     <div className="home-div">
       <div className="landing-text">
-        <h2>TAKE YOUR TRIP</h2>
-        <h2>PLANNING EXPERIENCE</h2>
-        <h2>TO THE NEXT LEVEL</h2>
+        <p>Take your trips to the</p>
+        <h2 className="next-level">NEXT LEVEL</h2>
+        <div className="get-started-button">
+          {/* <Button
+            className="actual-button"
+            variant="contained"
+            color="primary"
+            size="large"
+          >
+            Get Started{<ArrowForwardIosIcon />}
+          </Button> */}
+          <div className="the-real-button">
+            <Link to="/register">
+              <button>
+                Get Started
+                <ArrowForwardIosIcon />
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -13,9 +13,9 @@ const Layout = (props) => {
   return (
     <>
       <div className="layout-div">{props.children}</div>
-      <footer className="nav-footer">
-        <FooterNav handleLogout={handleLogout} currentUser={currentUser}/>
-      </footer>
+      {/* <footer className="nav-footer"> */}
+      {/* <FooterNav handleLogout={handleLogout} currentUser={currentUser}/> */}
+      {/* </footer> */}
     </>
   );
 };

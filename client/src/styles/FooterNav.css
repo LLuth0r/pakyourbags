@@ -2,7 +2,7 @@
   color: whitesmoke;
   font-family: "Roboto Mono", monospace;
   position: relative;
-  height: 10vh;
+  height: 8vh;
   width: 100%;
   bottom: 0px;
   word-spacing: -12px;
@@ -10,6 +10,22 @@
 
 .menu-icon {
   fill: whitesmoke !important;
+}
+
+.drawer-icon {
+  fill: whitesmoke !important;
+}
+
+.drawer-text {
+  color: whitesmoke !important;
+}
+
+.MuiListItemText-primary {
+  color: whitesmoke !important;
+}
+
+.user-name {
+  color: whitesmoke !important;
 }
 
 .nav-container {
@@ -25,19 +41,23 @@
 
 .logo-container {
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   align-items: center;
-  /* margin-left: 25px; */
 }
 
 .logo {
-  /* background-color: #371bb1; */
   background-image: url("../assets/logo.png");
   background-position: center;
   background-size: 200%;
   background-repeat: no-repeat;
-  height: 75px;
-  width: 75px;
-  /* border-radius: 100%; */
+  height: 65px;
+  width: 65px;
+}
+
+.MuiDrawer-paperAnchorBottom {
+  background-color: #232023 !important;
+}
+
+.MuiTypography-body1 {
+  font-family: "Roboto Mono", monospace !important;
 }
