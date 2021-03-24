@@ -1,7 +1,8 @@
 // DEPENDENCIES
+import {Link} from "react-router-dom";
 
 // MATERIAL UI COMPONENTS
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 // STYLES
@@ -23,10 +24,12 @@ const Home = () => {
             Get Started{<ArrowForwardIosIcon />}
           </Button> */}
           <div className="the-real-button">
-            <button>
-              Get Started
-              <ArrowForwardIosIcon />
-            </button>
+            <Link to="/register">
+              <button>
+                Get Started
+                <ArrowForwardIosIcon />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
