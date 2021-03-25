@@ -19,6 +19,12 @@ _**Pak Your Bags** MVP list:
 
 <br>
 
+_**Post MVP List:**
+- _Comments/Notes_
+- _Messaging/Chat_
+- _Google/Facebook/Twitter Login_
+- _
+
 ### Goals
 
 - Week 1: _ERD/Wireframe/Backend Created_
