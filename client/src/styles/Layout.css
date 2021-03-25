@@ -1,11 +1,11 @@
 .layout-div {
-  /* background-color: green; */
   height: 100%;
   min-height: 90vh;
   /* background-image: url("../assets/sofy-m-halftoneco-N7uekwIyQ7E-unsplash.jpg"); */
   /* background-size: cover; */
   /* background-repeat: no-repeat; */
 }
+
 
 .layout-div p {
   margin: 0px;

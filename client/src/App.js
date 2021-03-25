@@ -8,6 +8,7 @@ import Layout from '../src/layouts/Layout'
 import MainContainer from '../src/containers/MainContainer'
 import Register from '../src/screens/Register'
 import Login from '../src/screens/Login'
+import {withTheme} from "./services/Theme"
 
 // STYLES
 import './App.css';
@@ -33,6 +34,8 @@ function App() {
   const handleLogin = async (loginData) => {
     const userData = await loginUser(loginData);
     setCurrentUser(userData);
+    // Set up onboarding screen
+    // userData.onboarding_check ? Redirect("/onboarding") :
     history.push('/');
   };
 
@@ -76,4 +79,4 @@ function App() {
   );
 }
 
-export default App;
+export default withTheme(App);
