@@ -11,27 +11,15 @@ import "../styles/Home.css";
 const Home = () => {
   return (
     <div className="home-div">
+      <div className="the-real-button">
+        <Link to="/register">
+          <button>Let's Get Started</button>
+        </Link>
+        <Link to="/login">Login</Link>
+      </div>
       <div className="landing-text">
         <p>Take your trips to the</p>
-        <h2 className="next-level">NEXT LEVEL</h2>
-        <div className="get-started-button">
-          {/* <Button
-            className="actual-button"
-            variant="contained"
-            color="primary"
-            size="large"
-          >
-            Get Started{<ArrowForwardIosIcon />}
-          </Button> */}
-          <div className="the-real-button">
-            <Link to="/register">
-              <button>
-                Get Started
-                <ArrowForwardIosIcon />
-              </button>
-            </Link>
-          </div>
-        </div>
+        <h1 className="next-level">Next Level</h1>
       </div>
     </div>
   );
