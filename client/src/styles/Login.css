@@ -1,46 +1,38 @@
 .loginpage {
-	display: flex;
-    flex-direction: column;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-header {
-	font-size: 24px;
-	margin: 75px 0 25px 0px;
-}
-
-.register-header {
-	font-size: 14px;
-}
-
-.register-link {
-	font-size: 14px;
+  font-size: 24px;
+  margin: 75px 0 25px 0px;
 }
 
 .login-div {
-   display: flex;
-   justify-content: center;
-   margin-bottom: 35px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 35px;
 }
 
 .login-form {
-    margin: 15px 0px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-self: center;
-	width: 270px;
-	height: 200px;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: center;
+  width: 270px;
+  height: 200px;
 }
-
 
 .alternate-account-text {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
-.google, .facebook, .twitter {
-	height: 35px;
-	margin: 40px 25px;
+.google,
+.facebook,
+.twitter {
+  height: 35px;
+  margin: 40px 25px;
 }
-

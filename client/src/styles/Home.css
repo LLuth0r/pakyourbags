@@ -55,7 +55,7 @@
 }
 
 .the-real-button button {
-  font-family: "Roboto", monospace;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   width: 200px;
   height: 55px;
@@ -68,7 +68,7 @@
   border: 0;
   outline: none;
   border-radius: 100px 5px 100px 100px;
-  box-shadow: 0px 5px 5px #121212;
+  box-shadow: 0px 5px 5px #12121280;
   cursor: pointer;
 }
 
@@ -78,11 +78,12 @@
 
 .the-real-button button:active {
   background-color: #e43101;
-  box-shadow: 0px 2px 5px #121212;
+  box-shadow: 0px 2px 5px #12121280;
   transform: translateY(3px);
 }
 
 .the-real-button a {
   text-decoration: none;
   color: #121212;
+  font-size: 18px;
 }
