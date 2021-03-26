@@ -16,7 +16,6 @@ export default function OnboardingCarousel(props) {
     root: {
       backgroundColor: current.backgroundColor,
       height: "100vh",
-      fontFamily: ["Roboto", "sans-serif"].join(","),
     },
     backButton: {},
     head: { textAlign: "center" },
