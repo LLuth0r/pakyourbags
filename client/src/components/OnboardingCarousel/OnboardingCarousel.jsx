@@ -1,16 +1,9 @@
 import { Button, Typography } from "@material-ui/core";
-import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import ProgressDots from "./ProgressDots";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export default function OnboardingCarousel(props) {
-  const { info } = props;
-  const history = useHistory();
-
-  const [active, setActive] = useState(0);
-
-  const current = info[active];
+  const { active, advance, back, current } = props;
 
   const styles = {
     root: {
@@ -51,23 +44,6 @@ export default function OnboardingCarousel(props) {
     },
   };
 
-  const advance = () => {
-    if (active === info.length - 1) {
-      history.push("/mytrips");
-    } else {
-      setActive((prev) => prev + 1);
-    }
-  };
-
-  const back = () => {
-    if (active <= 0) {
-      history.push("/login");
-    } else {
-      setActive((prev) => prev - 1);
-    }
-  };
-
-  console.log(current);
   return (
     <div style={styles.root}>
       <Button style={styles.backButton} onClick={back}>
