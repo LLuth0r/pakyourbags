@@ -3,7 +3,7 @@ class AuthenticationController < ApplicationController
   
     def login
       @user = User.find_by(username: login_params[:username])
-      
+      p @user
       if @user.authenticate(login_params[:password])
         @token = encode({id: @user.id})
         render json: {

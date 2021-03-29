@@ -1,18 +1,23 @@
 // DEPENDENCIES
-import { Switch, Route, useHistory } from 'react-router-dom'
-import { loginUser, registerUser, removeToken, verifyUser } from './services/auth';
-import { useState, useEffect } from 'react'
+import { Switch, Route, useHistory } from "react-router-dom";
+import {
+  loginUser,
+  registerUser,
+  removeToken,
+  verifyUser,
+} from "./services/auth";
+import { useState, useEffect } from "react";
 
 // COMPONENTS
-import Layout from '../src/layouts/Layout'
-import MainContainer from '../src/containers/MainContainer'
-import Register from '../src/screens/Register'
-import Login from '../src/screens/Login'
-import {withTheme} from "./services/Theme"
+import Layout from "../src/layouts/Layout";
+import MainContainer from "../src/containers/MainContainer";
+import Register from "../src/screens/Register";
+import Login from "../src/screens/Login";
+import { withTheme } from "./services/Theme";
 
 // STYLES
-import './App.css';
-
+import "./App.css";
+import Onboarding from "./screens/Onboarding";
 
 function App() {
   // Define current user to pass down as props
@@ -26,8 +31,8 @@ function App() {
     const handleVerify = async () => {
       const userData = await verifyUser();
       setCurrentUser(userData);
-    }
-    handleVerify()
+    };
+    handleVerify();
   }, []);
 
   // Login user
@@ -36,43 +41,44 @@ function App() {
     setCurrentUser(userData);
     // Set up onboarding screen
     // userData.onboarding_check ? Redirect("/onboarding") :
-    history.push('/');
+    history.push("/");
   };
 
   // Register user
   const handleRegister = async (registerData) => {
     const userData = await registerUser(registerData);
     setCurrentUser(userData);
-    history.push('/');
-  }
+    history.push("/onboarding");
+  };
 
   // Logout user
   const handleLogout = () => {
     setCurrentUser(null);
-    localStorage.removeItem('authToken');
+    localStorage.removeItem("authToken");
     removeToken();
-  }
+  };
 
   return (
     <Layout currentUser={currentUser} handleLogout={handleLogout}>
       <Switch>
         {/* LOGIN */}
-        <Route path='/login'>
-          <Login
-            handleLogin={handleLogin}
-          />
+        <Route path="/login">
+          <Login handleLogin={handleLogin} />
         </Route>
 
         {/* REGISTER */}
-        <Route path='/register'>
-          <Register
-            handleRegister={handleRegister}
-          />
+        <Route path="/register">
+          <Register handleRegister={handleRegister} />
+        </Route>
+
+        {/* ONBOARDING */}
+        <Route path="/onboarding">
+          <Onboarding />
         </Route>
 
         {/* LANDING */}
-        <Route path='/'>
-          <MainContainer currentUser={ currentUser}/>
+        <Route path="/">
+          <MainContainer currentUser={currentUser} />
         </Route>
       </Switch>
     </Layout>

@@ -10,6 +10,7 @@ import "../styles/Register.css";
 import Google from "../assets/google-color.png";
 import Facebook from "../assets/facebook-color.png";
 import Twitter from "../assets/twitter-color.png";
+import ProgressDots from "../components/OnboardingCarousel/ProgressDots";
 
 const Register = (props) => {
   // setting form data state
@@ -22,15 +23,15 @@ const Register = (props) => {
     password: "",
   });
 
-  const {first_name, last_name, username, email, password} = formData;
+  const { first_name, last_name, username, email, password } = formData;
 
   // deconstructing handle register function from auth
 
-  const {handleRegister} = props;
+  const { handleRegister, dots, advance, active } = props;
 
   // generic handle change for input fields
   const handleChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
@@ -54,26 +55,12 @@ const Register = (props) => {
             value={first_name}
             onChange={handleChange}
           />
-          {/* <TextField
-            name="first_name"
-            label="First Name"
-            variant="filled"
-            value={first_name}
-            onChange={handleChange}
-          /> */}
           <input
             placeholder="Last Name"
             name="last_name"
             value={last_name}
             onChange={handleChange}
           />
-          {/* <TextField
-            name="last_name"
-            label="Last Name"
-            variant="filled"
-            value={last_name}
-            onChange={handleChange}
-          /> */}
         </div>
         <div className="account-inputs">
           <input
@@ -106,6 +93,14 @@ const Register = (props) => {
         Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
+        <div
+        style={{
+          width: "30vw",
+          margin: "0 auto",
+        }}
+      >
+        <ProgressDots totalDots={4} filledDots={1} />
+      </div>
   );
 };
 
