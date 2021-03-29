@@ -16,12 +16,6 @@
   font-size: 14px;
 }
 
-/* .register-div {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 35px;
-} */
-
 .register-form {
   margin-top: 15px 0px;
   display: flex;
@@ -88,7 +82,7 @@
   transform: translateY(3px);
 }
 
-.current-user a {
+.login-user a {
   text-decoration: none;
   color: #fe5d2a;
 }

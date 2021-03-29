@@ -82,41 +82,18 @@ const Register = (props) => {
             value={username}
             onChange={handleChange}
           />
-          {/* <TextField
-            name="username"
-            label="Username"
-            variant="filled"
-            value={username}
-            onChange={handleChange}
-          /> */}
           <input
             placeholder="Email"
             name="email"
             value={email}
             onChange={handleChange}
           />
-          {/* <TextField
-            name="email"
-            label="Email"
-            variant="filled"
-            value={email}
-            onChange={handleChange}
-          /> */}
           <input
             placeholder="Password"
             name="password"
             value={password}
             onChange={handleChange}
           />
-          {/* <input placeholder="Confirm Password" />
-          <TextField
-          name="password"
-          type="password"
-          label="Password"
-          variant="filled"
-          value={password}
-          onChange={handleChange}
-        /> */}
         </div>
         <button className="sign-up-button" type="submit">
           Sign up
@@ -125,7 +102,7 @@ const Register = (props) => {
           Register
         </Button> */}
       </form>
-      <p className="current-user">
+      <p className="login-user">
         Already have an account? <Link to="/login">Login</Link>
       </p>
     </div>
