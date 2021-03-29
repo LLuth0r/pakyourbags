@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 //Styling
 import "../styles/Login.css";
@@ -10,68 +10,78 @@ import "../styles/Login.css";
 import Google from "../assets/google-color.png";
 import Facebook from "../assets/facebook-color.png";
 import Twitter from "../assets/twitter-color.png";
+import {makeStyles} from "@material-ui/core";
+
+// const useStyles = makeStyles((theme) => ({
+//   root: {},
+//   input: {
+//     background: `#F5F5F5`,
+//     width: "70vw",
+//     height: "30px",
+//     borderRadius: "20px",
+//   },
+// }));
 
 const Login = (props) => {
-	// setting form data state
+  // const classes = useStyles();
 
-	const [formData, setFormData] = useState({
-		username: "",
-		password: "",
-	});
+  // setting form data state
 
-	const { username, password } = formData;
+  const [formData, setFormData] = useState({
+    username: "",
+    password: "",
+  });
 
-	// deconstructing the handle login function from props
+  const {username, password} = formData;
 
-	const { handleLogin } = props;
+  // deconstructing the handle login function from props
 
-	// generic handle change to grab what is put in text fields
+  const {handleLogin} = props;
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData((prevState) => ({
-			...prevState,
-			[name]: value,
-		}));
-	};
+  // generic handle change to grab what is put in text fields
 
-	return (
-		<div className="loginpage">
-			<h3 className="login-header">Login to your account.</h3>
-			<div className="login-div">
-				<form
-					className="login-form"
-					onSubmit={(e) => {
-						e.preventDefault();
-						handleLogin(formData);
-					}}
-				>
-					<TextField
-						name="username"
-						id="username"
-						label="Username"
-						variant="filled"
-						value={username}
-						onChange={handleChange}
-					/>
-					<TextField
-						name="password"
-						id="password"
-						type="password"
-						label="Password"
-						variant="filled"
-						value={password}
-						onChange={handleChange}
-					/>
-					<Button className="formbutton" variant="contained" type="submit">
-						Login
-					</Button>
-				</form>
-			</div>
-			<p>Not a member?  <Link to='/register'>Join to plan your next vacation!
-				</Link></p>
-		</div>
-	);
+  const handleChange = (e) => {
+    const {name, value} = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  return (
+    <div className="login-page">
+      <h3 className="login-header">Login to your account.</h3>
+      <form
+        className="login-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleLogin(formData);
+        }}
+      >
+        <div className="user-inputs">
+          <input
+            placeholder="Username"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+          <input
+            placeholder="Password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+          />
+        </div>
+        <button className="login-button" type="submit">
+          Login
+        </button>
+      </form>
+      <p className="register-user">
+        Not a member?{" "}
+        <Link to="/register">Join to plan your next vacation!</Link>
+      </p>
+    </div>
+  );
 };
 
 export default Login;
