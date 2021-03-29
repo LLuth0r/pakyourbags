@@ -1,26 +1,30 @@
 .home-div {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100vh;
-  background-image: url("../assets/photo-1570970596471-fbb61e48b6cc.jpeg");
+  background-image: url("../assets/dave-ruck-GQZg8CrP3sc-unsplash.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .landing-text {
-  font-family: "Roboto Mono", monospace;
-  text-align: center;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
-  margin-top: 40vh;
-  position: fixed;
-  width: 90vw;
-  font-size: 28px;
+  margin-bottom: 15vh;
+  width: 85vw;
+  height: 100px;
+  font-size: 26px;
   text-shadow: 1px 1px 5px #121212;
-  word-spacing: -10px;
 }
-.landing-text h2 {
-  margin: 0px;
+
+.landing-text h1 {
+  margin: 5px;
 }
 
 .next-level {
@@ -28,35 +32,43 @@
   font-weight: bold;
 }
 
-.get-started-button {
+/* .get-started-button {
   margin: 230px 0px 0px 0px;
-  width: 90vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 
 .actual-button {
   width: 300px;
   height: 70px;
 }
 
+.the-real-button {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  height: 100px;
+}
+
 .the-real-button button {
-  font-family: "Roboto Mono", monospace;
-  font-weight: 500;
-  font-size: 20px;
-  width: 300px;
-  height: 65px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  width: 200px;
+  height: 55px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #fe5c31;
+  background-color: #fe5d2a;
   color: white;
   border: 0;
   outline: none;
-  border-radius: 15px;
-  box-shadow: 0px 5px 5px #121212;
+  border-radius: 100px 5px 100px 100px;
+  box-shadow: 0px 5px 5px #12121280;
   cursor: pointer;
 }
 
@@ -66,10 +78,12 @@
 
 .the-real-button button:active {
   background-color: #e43101;
-  box-shadow: 0px 2px 5px #121212;
+  box-shadow: 0px 2px 5px #12121280;
   transform: translateY(3px);
 }
 
 .the-real-button a {
   text-decoration: none;
+  color: #121212;
+  font-size: 18px;
 }

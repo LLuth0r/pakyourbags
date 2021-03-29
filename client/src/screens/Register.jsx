@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 //Styling
 import "../styles/Register.css";
@@ -39,58 +39,61 @@ const Register = (props) => {
   };
 
   return (
-    <div className="registerpage">
-      <h3 className="register-header">Create Your Account.</h3>
-      <div className="register-div">
-        <form
-          className="register-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            handleRegister(formData);
-          }}
-        >
-          <TextField
+    <div className="register-page">
+      <h3 className="register-header">Create your account</h3>
+      <form
+        className="register-form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleRegister(formData);
+        }}
+      >
+        <div className="name-inputs">
+          <input
+            placeholder="First Name"
             name="first_name"
-            label="First Name"
-            variant="filled"
             value={first_name}
             onChange={handleChange}
           />
-          <TextField
+          <input
+            placeholder="Last Name"
             name="last_name"
-            label="Last Name"
-            variant="filled"
             value={last_name}
             onChange={handleChange}
           />
-          <TextField
+        </div>
+        <div className="account-inputs">
+          <input
+            placeholder="Username"
             name="username"
-            label="Username"
-            variant="filled"
             value={username}
             onChange={handleChange}
           />
-          <TextField
+          <input
+            placeholder="Email"
             name="email"
-            label="Email"
-            variant="filled"
             value={email}
             onChange={handleChange}
           />
-          <TextField
+          <input
+            placeholder="Password"
             name="password"
-            type="password"
-            label="Password"
-            variant="filled"
             value={password}
             onChange={handleChange}
           />
-          <Button className="register-button" variant="contained" type="submit">
-            Register
-          </Button>
-        </form>
-      </div>
-      <div
+        </div>
+        <button className="sign-up-button" type="submit">
+          Sign up
+        </button>
+        {/* <Button className="register-button" variant="contained" type="submit">
+          Register
+        </Button> */}
+      </form>
+      <p className="login-user">
+        Already have an account? <Link to="/login">Login</Link>
+      </p>
+    </div>
+        <div
         style={{
           width: "30vw",
           margin: "0 auto",
@@ -98,10 +101,6 @@ const Register = (props) => {
       >
         <ProgressDots totalDots={4} filledDots={1} />
       </div>
-      <p>
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-    </div>
   );
 };
 
