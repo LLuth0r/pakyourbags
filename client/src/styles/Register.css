@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   font-family: "Roboto", sans-serif;
+  height: 90vh;
 }
 
 .register-header {
@@ -80,6 +81,10 @@
   background-color: #fe5d2a;
   box-shadow: 0px 2px 5px #12121280;
   transform: translateY(3px);
+}
+
+.login-user {
+  max-width: 80vw;
 }
 
 .login-user a {
