@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
+import {FaWallet, FaUsers, FaEdit} from "react-icons/fa";
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
 import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
 import NoteIcon from "@material-ui/icons/Note";
 
 import OnboardingCarousel from "../components/OnboardingCarousel/OnboardingCarousel";
-import { useHistory } from "react-router";
+import {useHistory} from "react-router";
 
 const info = [
   {
     word: "Plan",
     head: "with friends!",
-    icon: <PeopleOutlineIcon fontSize="inherit" />,
+    icon: <FaUsers fontSize="inherit" />,
     blurb:
       "Vote on trip dates and destinations while booking flights and hotels together!",
     button: "Next",
@@ -22,7 +23,7 @@ const info = [
   {
     word: "Stick to",
     head: "a budget!!",
-    icon: <AccountBalanceWalletIcon fontSize="inherit" />,
+    icon: <FaWallet fontSize="inherit" />,
     blurb: "Set a budget that we help you follow every step of the way!",
     button: "Next",
     backgroundColor: "#FE5D2A",
@@ -33,7 +34,7 @@ const info = [
   {
     word: "Leave",
     head: "Notes!",
-    icon: <NoteIcon fontSize="inherit" />,
+    icon: <FaEdit fontSize="inherit" />,
     blurb: 'Leave notes for your friends on trips - or just to say "Hello"!',
     button: "Get Started!",
     backgroundColor: "#96B4B660",
