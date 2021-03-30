@@ -1,16 +1,18 @@
+// DEPENDENCIES
 import React, {useState} from "react";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 
-//Styling
+// COMPONENTS
+import ProgressDots from "../components/OnboardingCarousel/ProgressDots";
+// import Button from "@material-ui/core/Button";
+
+// STYLES
 import "../styles/Register.css";
 
-//Assets
-import Google from "../assets/google-color.png";
-import Facebook from "../assets/facebook-color.png";
-import Twitter from "../assets/twitter-color.png";
-import ProgressDots from "../components/OnboardingCarousel/ProgressDots";
+// ASSETS
+// import Google from "../assets/google-color.png";
+// import Facebook from "../assets/facebook-color.png";
+// import Twitter from "../assets/twitter-color.png";
 
 const Register = (props) => {
   // setting form data state
@@ -27,7 +29,7 @@ const Register = (props) => {
 
   // deconstructing handle register function from auth
 
-  const {handleRegister, dots, advance, active} = props;
+  const {handleRegister} = props;
 
   // generic handle change for input fields
   const handleChange = (e) => {
