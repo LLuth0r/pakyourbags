@@ -1,16 +1,9 @@
 import React, {useState} from "react";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
 import {Link} from "react-router-dom";
 
 //Styling
 import "../styles/Login.css";
 
-//Assets
-import Google from "../assets/google-color.png";
-import Facebook from "../assets/facebook-color.png";
-import Twitter from "../assets/twitter-color.png";
-import {makeStyles} from "@material-ui/core";
 
 // const useStyles = makeStyles((theme) => ({
 //   root: {},
