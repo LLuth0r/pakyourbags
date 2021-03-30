@@ -1,11 +1,11 @@
-import { Button, Typography } from "@material-ui/core";
+import { Button, makeStyles, Typography } from "@material-ui/core";
 import ProgressDots from "./ProgressDots";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export default function OnboardingCarousel(props) {
   const { active, advance, back, current } = props;
 
-  const styles = {
+  const useStyles = makeStyles((theme) => ({
     root: {
       backgroundColor: current.backgroundColor,
       height: "100vh",
@@ -37,32 +37,38 @@ export default function OnboardingCarousel(props) {
       width: "60vw",
       height: "40px",
       textTransform: "none",
+      boxShadow: "0px 5px 5px #12121280",
+      "&:hover": {
+        backgroundColor: "#FFFFFF",
+      },
     },
     dots: {
       width: "30vw",
       margin: "0 auto",
     },
-  };
+  }));
+
+  const classes = useStyles();
 
   return (
-    <div style={styles.root}>
-      <Button style={styles.backButton} onClick={back}>
+    <div className={classes.root}>
+      <Button className={classes.backButton} onClick={back}>
         <ArrowBackIcon />
       </Button>
-      <div style={styles.head}>
+      <div className={classes.head}>
         <Typography variant="h6">{current.word}</Typography>
         <Typography variant="h4">{current.head}</Typography>
       </div>
-      <div style={styles.blurb}>
+      <div className={classes.blurb}>
         <div>
-          <div style={styles.icon}>{current.icon}</div>
-          <Typography style={styles.blurbText}>{current.blurb}</Typography>
+          <div className={classes.icon}>{current.icon}</div>
+          <Typography className={classes.blurbText}>{current.blurb}</Typography>
         </div>
 
-        <Button style={styles.button} onClick={advance}>
+        <Button className={classes.button} onClick={advance}>
           {current.button}
         </Button>
-        <div style={styles.dots}>
+        <div className={classes.dots}>
           <ProgressDots totalDots={4} filledDots={active + 2} />
         </div>
       </div>
