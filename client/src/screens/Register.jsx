@@ -4,7 +4,9 @@ import {Link} from "react-router-dom";
 
 // COMPONENTS
 import ProgressDots from "../components/OnboardingCarousel/ProgressDots";
-// import Button from "@material-ui/core/Button";
+
+// MATERIAL UI COMPONENTS
+import {Button, makeStyles} from "@material-ui/core";
 
 // STYLES
 import "../styles/Register.css";
@@ -16,7 +18,6 @@ import "../styles/Register.css";
 
 const Register = (props) => {
   // setting form data state
-
   const [formData, setFormData] = useState({
     first_name: "",
     last_name: "",
@@ -28,7 +29,6 @@ const Register = (props) => {
   const {first_name, last_name, username, email, password} = formData;
 
   // deconstructing handle register function from auth
-
   const {handleRegister} = props;
 
   // generic handle change for input fields
@@ -39,6 +39,32 @@ const Register = (props) => {
       [name]: value,
     }));
   };
+
+  // Define useStyles function using makeStyles
+  const useStyles = makeStyles((theme) => ({
+    button: {
+      backgroundColor: "#121212",
+      color: "white",
+      textTransform: "none",
+      height: "40px",
+      width: "60vw",
+      maxWidth: "350px",
+      borderRadius: "100px",
+      margin: "50px 0px 50px 0px",
+      boxShadow: "0px 5px 5px #12121280",
+      "&:hover": {
+        backgroundColor: "#212121",
+        boxShadow: "0px 5px 5px #12121280",
+      },
+      "&:active": {
+        boxShadow: "0px 2px 5px #12121280",
+        transform: "translateY(3px)",
+      },
+    },
+  }));
+
+  // Invoke useStyles function to add styles to the button using className
+  const classes = useStyles();
 
   return (
     <>
@@ -85,12 +111,9 @@ const Register = (props) => {
               onChange={handleChange}
             />
           </div>
-          <button className="sign-up-button" type="submit">
+          <Button className={classes.button} variant="contained" type="submit">
             Sign up
-          </button>
-          {/* <Button className="register-button" variant="contained" type="submit">
-          Register
-        </Button> */}
+          </Button>
         </form>
         <p className="login-user">
           Already have an account? <Link to="/login">Login</Link>
