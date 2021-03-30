@@ -43,6 +43,7 @@ const Login = (props) => {
       boxShadow: "0px 5px 5px #12121280",
       "&:hover": {
         backgroundColor: "#212121",
+        boxShadow: "0px 5px 5px #12121280",
       },
       "&:active": {
         boxShadow: "0px 2px 5px #12121280",
