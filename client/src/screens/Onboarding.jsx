@@ -18,6 +18,7 @@ const info = [
     backgroundColor: "#96B4B660",
     foregroundColor: "#FFFFFF",
     buttonColor: "#FE5D2A",
+    hoverColor: "#121212",
     headColor: "#121212",
   },
   {
@@ -29,6 +30,7 @@ const info = [
     backgroundColor: "#FE5D2A",
     foregroundColor: "#FFFFFF",
     buttonColor: "#121212",
+    hoverColor: "#FE5D2A",
     headColor: "#FFFFFF",
   },
   {
@@ -40,6 +42,7 @@ const info = [
     backgroundColor: "#96B4B660",
     foregroundColor: "#FFFFFF",
     buttonColor: "#FE5D2A",
+    hoverColor: "#121212",
     headColor: "#121212",
   },
 ];
