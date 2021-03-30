@@ -59,7 +59,7 @@
   width: 100%;
 }
 
-.sign-up-button {
+/* .sign-up-button {
   background-color: #121212;
   color: white;
   border: none;
@@ -81,7 +81,7 @@
   background-color: #fe5d2a;
   box-shadow: 0px 2px 5px #12121280;
   transform: translateY(3px);
-}
+} */
 
 .login-user {
   max-width: 80vw;

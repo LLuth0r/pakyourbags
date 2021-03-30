@@ -32,21 +32,8 @@
   font-weight: bold;
 }
 
-/* .get-started-button {
-  margin: 230px 0px 0px 0px;
-  width: 60vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-.actual-button {
-  width: 300px;
-  height: 70px;
-}
-
-.the-real-button {
-  font-family: "Roboto", sans-serif;
+.navigation-links {
+  /* font-family: "Roboto", sans-serif; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,35 +41,7 @@
   height: 100px;
 }
 
-.the-real-button button {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  width: 200px;
-  height: 55px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  background-color: #fe5d2a;
-  color: white;
-  border: 0;
-  outline: none;
-  border-radius: 100px 5px 100px 100px;
-  box-shadow: 0px 5px 5px #12121280;
-  cursor: pointer;
-}
-
-.the-real-button button:hover {
-  background-color: #e43101;
-}
-
-.the-real-button button:active {
-  background-color: #e43101;
-  box-shadow: 0px 2px 5px #12121280;
-  transform: translateY(3px);
-}
-
-.the-real-button a {
+.navigation-links a {
   text-decoration: none;
   color: #121212;
   font-size: 18px;
