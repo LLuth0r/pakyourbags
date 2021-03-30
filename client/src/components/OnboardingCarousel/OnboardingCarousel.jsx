@@ -1,5 +1,10 @@
-import {Button, makeStyles, Typography} from "@material-ui/core";
+// DEPENDENCIES
+
+// COMPONENTS
 import ProgressDots from "./ProgressDots";
+
+// MATERIAL UI COMPONENTS
+import {Button, makeStyles, Typography} from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export default function OnboardingCarousel(props) {

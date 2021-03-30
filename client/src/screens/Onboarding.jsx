@@ -1,11 +1,12 @@
+// DEPENDENCIES
 import React, {useState} from "react";
-import {FaWallet, FaUsers, FaEdit} from "react-icons/fa";
-import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
-import PeopleOutlineIcon from "@material-ui/icons/PeopleOutline";
-import NoteIcon from "@material-ui/icons/Note";
-
-import OnboardingCarousel from "../components/OnboardingCarousel/OnboardingCarousel";
 import {useHistory} from "react-router";
+
+// COMPONENTS
+import OnboardingCarousel from "../components/OnboardingCarousel/OnboardingCarousel";
+
+// ICONS
+import {FaWallet, FaUsers, FaEdit} from "react-icons/fa";
 
 const info = [
   {

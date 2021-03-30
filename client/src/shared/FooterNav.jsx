@@ -15,13 +15,9 @@ import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import {
   FaUserTie,
-  FaHotel,
-  FaRegCalendarAlt,
   FaSuitcaseRolling,
   FaPlus,
-  FaPlane,
   FaCameraRetro,
-  FaMoneyBillAlt,
   FaSignOutAlt,
 } from "react-icons/fa";
 
