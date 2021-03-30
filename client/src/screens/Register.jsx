@@ -91,7 +91,7 @@ const Register = (props) => {
         </Button> */}
         </form>
         <p className="login-user">
-          Already have an account? <Link to="/onboarding">Login</Link>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </div>
       <div
