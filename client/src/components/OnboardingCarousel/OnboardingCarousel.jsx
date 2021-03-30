@@ -1,9 +1,14 @@
-import { Button, makeStyles, Typography } from "@material-ui/core";
+// DEPENDENCIES
+
+// COMPONENTS
 import ProgressDots from "./ProgressDots";
+
+// MATERIAL UI COMPONENTS
+import {Button, makeStyles, Typography} from "@material-ui/core";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 export default function OnboardingCarousel(props) {
-  const { active, advance, back, current } = props;
+  const {active, advance, back, current} = props;
 
   const useStyles = makeStyles((theme) => ({
     root: {
@@ -11,7 +16,7 @@ export default function OnboardingCarousel(props) {
       height: "100vh",
     },
     backButton: {},
-    head: { textAlign: "center" },
+    head: {textAlign: "center"},
     blurb: {
       backgroundColor: current.foregroundColor,
       display: "flex",
@@ -39,7 +44,10 @@ export default function OnboardingCarousel(props) {
       textTransform: "none",
       boxShadow: "0px 5px 5px #12121280",
       "&:hover": {
-        backgroundColor: "#FFFFFF",
+        backgroundColor: current.hoverColor,
+      },
+      "&:active": {
+        transform: "translateY(3px)",
       },
     },
     dots: {

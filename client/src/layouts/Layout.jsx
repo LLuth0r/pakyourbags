@@ -2,13 +2,13 @@
 import React from "react";
 
 // COMPONENTS
-import FooterNav from "../shared/FooterNav";
+// import FooterNav from "../shared/FooterNav";
 
 // STYLES
 import "../styles/Layout.css";
 
 const Layout = (props) => {
-  const {currentUser, handleLogout} = props;
+  // const {currentUser, handleLogout} = props;
 
   return (
     <>

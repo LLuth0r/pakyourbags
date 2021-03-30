@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 
 // MATERIAL UI COMPONENTS
 // import Button from "@material-ui/core/Button";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
 // STYLES
 import "../styles/Home.css";
