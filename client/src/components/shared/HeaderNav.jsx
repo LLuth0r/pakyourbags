@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
 export default function HeaderNav() {
   return (
     <div>
       {/* Home Button */}
       {/* New Trip Icon */}
-      {/*  */}
+      {/* Messaging Icon */}
     </div>
-  )
+  );
 }
