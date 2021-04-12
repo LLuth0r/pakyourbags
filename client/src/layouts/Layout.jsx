@@ -12,9 +12,10 @@ const Layout = (props) => {
 
   return (
     <>
+      {/* <HeaderNav handleLogout={handleLogout} currentUser={currentUser}/>/> */}
       <div className="layout-div">{props.children}</div>
       {/* <footer className="nav-footer"> */}
-      {/* <FooterNav handleLogout={handleLogout} currentUser={currentUser}/> */}
+      {/* <FooterNav   */}
       {/* </footer> */}
     </>
   );
