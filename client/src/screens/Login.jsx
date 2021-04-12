@@ -76,6 +76,7 @@ const Login = (props) => {
             placeholder="Password"
             name="password"
             value={password}
+            type="password"
             onChange={handleChange}
           />
         </div>
