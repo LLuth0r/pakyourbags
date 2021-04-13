@@ -4,6 +4,7 @@ import React from "react";
 
 // COMPONENTS
 import Home from "../screens/Home";
+import MyTrips from "../screens/MyTrips";
 import CreateTrip from "../screens/CreateTrip";
 import UserTrips from "../screens/UserTrips";
 import Messages from "../screens/Messages";
@@ -17,6 +18,7 @@ const MainContainer = () => {
       </Route>
       {/* MY TRIPS */}
       <Route path="/mytrips">
+        <MyTrips />
         <UserTrips />
       </Route>
       {/* CREATE TRIP */}
