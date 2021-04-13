@@ -1,6 +1,6 @@
 // DEPENDENCIES
 import { Switch, Route } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 
 // COMPONENTS
 import Home from "../screens/Home";
@@ -9,6 +9,7 @@ import UserTrips from "../screens/UserTrips";
 import Messages from "../screens/Messages";
 
 const MainContainer = () => {
+  const [userTrips, setUserTrips] = useState();
   return (
     <Switch>
       {/* LANDING PAGE */}
@@ -21,7 +22,7 @@ const MainContainer = () => {
       </Route>
       {/* CREATE TRIP */}
       <Route path="/create-trip">
-        <CreateTrip />
+        <CreateTrip userTrips={userTrips} />
       </Route>
       {/* TRIP OVERVIEW */}
       {/* BUDGET */}
