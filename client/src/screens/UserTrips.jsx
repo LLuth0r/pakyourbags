@@ -1,10 +1,11 @@
-import React from 'react'
+import React from "react";
+import Layout from "../layouts/Layout";
 
 export default function UserTrips() {
-    return (
-        <div>
-            <h2>Cancun Trip</h2>
-            <img src=''/>
-        </div>
-    )
+  return (
+    <Layout location="/mytrips">
+      <h2>Cancun Trip</h2>
+      <img src="" alt="img" />
+    </Layout>
+  );
 }

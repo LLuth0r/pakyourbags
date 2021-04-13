@@ -9,7 +9,7 @@ import {
 import { useState, useEffect } from "react";
 
 // COMPONENTS
-import Layout from "../src/layouts/Layout";
+// import Layout from "../src/layouts/Layout";
 import MainContainer from "../src/containers/MainContainer";
 import Register from "../src/screens/Register";
 import Login from "../src/screens/Login";
@@ -59,29 +59,27 @@ function App() {
   };
 
   return (
-    <Layout currentUser={currentUser} handleLogout={handleLogout}>
-      <Switch>
-        {/* LOGIN */}
-        <Route path="/login">
-          <Login handleLogin={handleLogin} />
-        </Route>
+    <Switch>
+      {/* LOGIN */}
+      <Route path="/login">
+        <Login handleLogin={handleLogin} />
+      </Route>
 
-        {/* REGISTER */}
-        <Route path="/register">
-          <Register handleRegister={handleRegister} />
-        </Route>
+      {/* REGISTER */}
+      <Route path="/register">
+        <Register handleRegister={handleRegister} />
+      </Route>
 
-        {/* ONBOARDING */}
-        <Route path="/onboarding">
-          <Onboarding />
-        </Route>
+      {/* ONBOARDING */}
+      <Route path="/onboarding">
+        <Onboarding />
+      </Route>
 
-        {/* LANDING */}
-        <Route path="/">
-          <MainContainer currentUser={currentUser} />
-        </Route>
-      </Switch>
-    </Layout>
+      {/* LANDING */}
+      <Route path="/">
+        <MainContainer currentUser={currentUser} handleLogout={handleLogout} />
+      </Route>
+    </Switch>
   );
 }
 

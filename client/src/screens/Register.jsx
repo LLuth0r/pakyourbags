@@ -1,12 +1,12 @@
 // DEPENDENCIES
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 // COMPONENTS
 import ProgressDots from "../components/OnboardingCarousel/ProgressDots";
 
 // MATERIAL UI COMPONENTS
-import {Button, makeStyles} from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
 
 // STYLES
 import "../styles/Register.css";
@@ -26,14 +26,14 @@ const Register = (props) => {
     password: "",
   });
 
-  const {first_name, last_name, username, email, password} = formData;
+  const { first_name, last_name, username, email, password } = formData;
 
   // deconstructing handle register function from auth
-  const {handleRegister} = props;
+  const { handleRegister } = props;
 
   // generic handle change for input fields
   const handleChange = (e) => {
-    const {name, value} = e.target;
+    const { name, value } = e.target;
     setFormData((prevState) => ({
       ...prevState,
       [name]: value,
