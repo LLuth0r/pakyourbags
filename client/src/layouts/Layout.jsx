@@ -2,21 +2,36 @@
 import React from "react";
 
 // COMPONENTS
-// import FooterNav from "../shared/FooterNav";
+import HeaderNav from "../components/shared/HeaderNav";
+import FooterNav from "../components/shared/FooterNav";
 
 // STYLES
-import "../styles/Layout.css";
+// import "../styles/Layout.css";
+import { makeStyles } from "@material-ui/core";
+const useStyles = makeStyles((theme) => ({
+  footer: {
+    position: "fixed",
+    bottom: 0,
+    width: "100vw",
+    marginBottom: "1vh",
+  },
+}));
 
 const Layout = (props) => {
-  // const {currentUser, handleLogout} = props;
-
+  const { currentUser, handleLogout, location } = props;
+  const classes = useStyles();
+  console.log(location);
   return (
     <>
-      {/* <HeaderNav handleLogout={handleLogout} currentUser={currentUser}/>/> */}
+      <HeaderNav
+        handleLogout={handleLogout}
+        currentUser={currentUser}
+        location={location}
+      />
       <div className="layout-div">{props.children}</div>
-      {/* <footer className="nav-footer"> */}
-      {/* <FooterNav   */}
-      {/* </footer> */}
+      <footer className={classes.footer}>
+        <FooterNav />
+      </footer>
     </>
   );
 };
