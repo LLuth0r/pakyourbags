@@ -107,6 +107,7 @@ const Register = (props) => {
             <input
               placeholder="Password"
               name="password"
+              type="password"
               value={password}
               onChange={handleChange}
             />
