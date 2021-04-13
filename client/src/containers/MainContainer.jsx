@@ -4,6 +4,7 @@ import React from "react";
 
 // COMPONENTS
 import Home from "../screens/Home";
+import MyTrips from "../screens/MyTrips";
 
 const MainContainer = () => {
   return (
@@ -13,7 +14,9 @@ const MainContainer = () => {
         <Home />
       </Route>
       {/* MY TRIPS */}
-      <Route path="/mytrips"></Route>
+      <Route path="/mytrips">
+        <MyTrips />
+      </Route>
       {/* CREATE TRIP */}
       <Route></Route>
       {/* TRIP OVERVIEW */}
