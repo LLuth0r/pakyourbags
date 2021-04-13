@@ -10,6 +10,7 @@ import Messages from "../screens/Messages";
 
 const MainContainer = () => {
   const [userTrips, setUserTrips] = useState();
+  
   return (
     <Switch>
       {/* LANDING PAGE */}
