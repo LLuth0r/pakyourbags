@@ -10,5 +10,5 @@ class Trip < ApplicationRecord
     has_many :trip_dates
     has_many :budgets
 
-
+    validates :name, presence: true
 end
