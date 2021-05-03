@@ -24,7 +24,11 @@ export default function HeaderNav(props) {
 
   const backButton = (
     <>
-      <Button onClick={() => {}}>
+      <Button
+        onClick={() => {
+          history.goBack();
+        }}
+      >
         <ArrowBackIcon />
       </Button>
     </>
