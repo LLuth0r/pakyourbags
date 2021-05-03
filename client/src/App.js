@@ -18,6 +18,8 @@ import { withTheme } from "./services/Theme";
 // STYLES
 import "./App.css";
 import Onboarding from "./screens/Onboarding";
+import MyAccount from "./screens/MyAccount";
+import Explore from "./screens/Explore";
 
 function App() {
   // Define current user to pass down as props
@@ -73,6 +75,16 @@ function App() {
       {/* ONBOARDING */}
       <Route path="/onboarding">
         <Onboarding />
+      </Route>
+
+      {/* MY ACCOUNT */}
+      <Route path="/my-account">
+        <MyAccount />
+      </Route>
+
+      {/* EXPLORE */}
+      <Route path="/explore">
+        <Explore />
       </Route>
 
       {/* LANDING */}

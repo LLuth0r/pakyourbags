@@ -1,4 +1,4 @@
-import { Avatar, Button, makeStyles } from "@material-ui/core";
+import { Button, makeStyles } from "@material-ui/core";
 import React from "react";
 import { useHistory } from "react-router-dom";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
@@ -9,11 +9,12 @@ const useStyles = makeStyles(() => ({
     display: "flex",
     flexFlow: "row wrap",
     justifyContent: "space-between",
-    alignItems: "flex-start",
-    width: "100vw",
+    alignItems: "center",
     height: "8vh",
-    position: "fixed",
-    top: 0,
+    padding: "1vh 2vw 1vh 2vw",
+  },
+  backButton: {
+    color: "#96B4B6",
   },
 }));
 
@@ -28,6 +29,7 @@ export default function HeaderNav(props) {
         onClick={() => {
           history.goBack();
         }}
+        className={classes.backButton}
       >
         <ArrowBackIcon />
       </Button>
@@ -39,8 +41,6 @@ export default function HeaderNav(props) {
       {/* Back Button if not on home screen */}
       {location === "/mytrips" ? <div></div> : backButton}
       <Logo />
-      {/* Prof Avatar */}
-      <Avatar />
     </div>
   );
 }
