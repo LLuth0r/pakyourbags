@@ -5,12 +5,16 @@ import Slide from "./Slide";
 
 import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
+  carousel: {
+    display: "grid",
+    width: "100vw",
+  },
   slideContainer: {
     display: "flex",
     flexFlow: "row nowrap",
     overflowX: "scroll",
-    maxHeight: "30vh",
-    maxWidth: "100vw",
+    // maxHeight: "30vh",
+    // maxWidth: "100vw",
   },
 }));
 
@@ -36,14 +40,14 @@ export default function SmallCarousel(props) {
   // };
 
   return (
-    <div>
-      {/* <ArrowLeft /> */}
+    <div className={classes.carousel}>
+      <ArrowLeft />
       <div className={classes.slideContainer}>
         {data.map((data) => (
           <Slide info={data} />
         ))}
       </div>
-      {/* <ArrowRight /> */}
+      <ArrowRight />
     </div>
   );
 }

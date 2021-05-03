@@ -1,63 +1,107 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 //MaterialUI stuff
-import HomeOutlinedIcon from "@material-ui/icons/HomeOutlined";
-import AddCircleOutlineOutlinedIcon from "@material-ui/icons/AddCircleOutlineOutlined";
-import InboxOutlinedIcon from "@material-ui/icons/InboxOutlined";
-import { Button, Tooltip } from "@material-ui/core";
+import { Button, Tooltip, Typography, withStyles } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
+import WorkOutlineIcon from "@material-ui/icons/WorkOutline";
+import SearchIcon from "@material-ui/icons/Search";
+import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
+import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 
 const useStyles = makeStyles((theme) => ({
   footerNav: {
     display: "flex",
     flexFlow: "row wrap",
-    justifyContent: "space-around",
+    justifyContent: "space-evenly",
     alignItems: "center",
     width: "100%",
+    backgroundColor: "#E5E5E5",
+    height: "10vh",
   },
-  newButton: {
-    width: "40px",
-    backgroundColor: theme.palette.primary.main,
-    borderRadius: "100%",
-    color: "white",
-    "&:hover": {
-      backgroundColor: theme.palette.primary.light,
-    },
+  link: {
+    display: "flex",
+    flexFlow: "column wrap",
+    textDecoration: "none",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "black",
   },
-  newButtonIcon: {
-    width: "100%",
-    height: "100%",
+  button: {},
+  text: { fontSize: ".6rem" },
+  icon: {},
+  iconActive: {
+    color: theme.palette.primary.main,
   },
 }));
 
-export default function FooterNav() {
+const CustomNavButton = withStyles((theme) => ({
+  label: {
+    display: "flex",
+    flexFlow: "column wrap",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+}))(Button);
+
+export default function FooterNav({ location }) {
   const classes = useStyles();
 
   return (
     <div className={classes.footerNav}>
       {/* Home Button */}
-      <Tooltip title="home">
-        <Link to="/mytrips">
-          <Button>
-            <HomeOutlinedIcon />
-          </Button>
+      <Tooltip title="My Trips">
+        <Link className={classes.link} to="/mytrips">
+          <CustomNavButton className={classes.button}>
+            <WorkOutlineIcon
+              className={
+                location === "/mytrips" ? classes.iconActive : classes.icon
+              }
+            />
+            <Typography className={classes.text}>My Trips</Typography>
+          </CustomNavButton>
         </Link>
       </Tooltip>
-      {/* New Trip Icon */}
-      <Tooltip title="Create a new trip">
-        <Link to="/create-trip">
-          <Button className={classes.newButton}>
-            <AddCircleOutlineOutlinedIcon className={classes.newButtonIcon} />
-          </Button>
+
+      {/* Explore Icon*/}
+      <Tooltip title="Explore">
+        <Link className={classes.link} to="/explore">
+          <CustomNavButton className={classes.button}>
+            <SearchIcon
+              className={
+                location === "/explore" ? classes.iconActive : classes.icon
+              }
+            />
+            <Typography className={classes.text}>Explore</Typography>
+          </CustomNavButton>
         </Link>
       </Tooltip>
-      {/* Messaging Icon */}
-      <Tooltip title="Inbox">
-        <Link to="/messages">
-          <Button>
-            <InboxOutlinedIcon />
-          </Button>
+
+      {/* Chats Icon Button */}
+      <Tooltip title="Chats">
+        <Link className={classes.link} to="/chats">
+          <CustomNavButton className={classes.button}>
+            <ChatBubbleOutlineIcon
+              className={
+                location === "/chats" ? classes.iconActive : classes.icon
+              }
+            />
+            <Typography className={classes.text}>Chats</Typography>
+          </CustomNavButton>
+        </Link>
+      </Tooltip>
+
+      {/* Account Icon */}
+      <Tooltip title="My Account">
+        <Link className={classes.link} to="/my-account">
+          <CustomNavButton className={classes.button}>
+            <PersonOutlineIcon
+              className={
+                location === "/my-account" ? classes.iconActive : classes.icon
+              }
+            />
+            <Typography className={classes.text}>My Account</Typography>
+          </CustomNavButton>
         </Link>
       </Tooltip>
     </div>

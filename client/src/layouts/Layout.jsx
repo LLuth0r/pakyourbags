@@ -13,7 +13,12 @@ const useStyles = makeStyles((theme) => ({
     position: "fixed",
     bottom: 0,
     width: "100vw",
-    marginBottom: "1vh",
+    boxShadow: "0px 0px 10px grey",
+  },
+  header: {
+    postion: "fixed",
+    top: 0,
+    width: "100vw",
   },
 }));
 
@@ -23,14 +28,18 @@ const Layout = (props) => {
   console.log(location);
   return (
     <>
-      <HeaderNav
-        handleLogout={handleLogout}
-        currentUser={currentUser}
-        location={location}
-      />
+      <header className={classes.header}>
+        <HeaderNav
+          handleLogout={handleLogout}
+          currentUser={currentUser}
+          location={location}
+        />
+      </header>
+
       <div className="layout-div">{props.children}</div>
+
       <footer className={classes.footer}>
-        <FooterNav />
+        <FooterNav location={location} />
       </footer>
     </>
   );

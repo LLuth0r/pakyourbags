@@ -5,7 +5,11 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   container: {},
   name: {},
-  image: { maxWidth: "60vw", maxHeight: "30vh", borderRadius: "25px" },
+  image: {
+    maxWidth: "60vw",
+    maxHeight: "30vh",
+    borderRadius: "25px",
+  },
 }));
 
 export default function Slide({ info }) {
@@ -14,6 +18,7 @@ export default function Slide({ info }) {
   return (
     <div className={classes.container}>
       <Typography className={classes.name}>{info.name}</Typography>
+      <Typography className={classes.name}>{info.location}</Typography>
       <img className={classes.image} src={info.image} />
     </div>
   );
